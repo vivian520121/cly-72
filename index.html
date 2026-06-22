@@ -7,89 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <div id="menu-screen" class="screen active">
-            <h1 class="game-title">汉字迷宫</h1>
-            <p class="subtitle">在文字中漫步，拼凑心灵的回响</p>
-            
-            <div class="menu-section">
-                <h3 class="section-title">选择类别</h3>
-                <div class="category-buttons">
-                    <button class="category-btn active" data-category="healing">治愈短句</button>
-                    <button class="category-btn" data-category="ancient">古风诗句</button>
-                    <button class="category-btn" data-category="gentle">温柔文案</button>
-                </div>
-            </div>
+    <div id="app"></div>
 
-            <div class="menu-section">
-                <h3 class="section-title">选择难度</h3>
-                <div class="difficulty-buttons">
-                    <button class="difficulty-btn active" data-difficulty="small">小型迷宫</button>
-                    <button class="difficulty-btn" data-difficulty="large">大型迷宫</button>
-                </div>
-            </div>
-
-            <button id="start-btn" class="primary-btn">开始游戏</button>
-            <button id="records-btn" class="secondary-btn">通关记录</button>
-        </div>
-
-        <div id="game-screen" class="screen">
-            <div class="game-header">
-                <button id="back-btn" class="icon-btn">← 返回</button>
-                <div class="game-info">
-                    <span class="timer" id="timer">00:00</span>
-                    <span class="level-info" id="level-info">第 1 关</span>
-                </div>
-                <button id="hint-btn" class="icon-btn">💡</button>
-            </div>
-
-            <div class="target-phrase">
-                <span class="target-label">目标：</span>
-                <span id="target-display" class="target-text"></span>
-            </div>
-
-            <div class="collected-section">
-                <span class="collected-label">已收集：</span>
-                <div id="collected-display" class="collected-chars"></div>
-            </div>
-
-            <div id="maze-container" class="maze-container">
-                <div id="maze-grid" class="maze-grid"></div>
-            </div>
-
-            <div class="mobile-controls">
-                <div class="dpad">
-                    <button class="dpad-btn dpad-up" data-dir="up">↑</button>
-                    <button class="dpad-btn dpad-left" data-dir="left">←</button>
-                    <button class="dpad-btn dpad-right" data-dir="right">→</button>
-                    <button class="dpad-btn dpad-down" data-dir="down">↓</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="records-screen" class="screen">
-            <div class="game-header">
-                <button id="records-back-btn" class="icon-btn">← 返回</button>
-                <h2 class="screen-title">通关记录</h2>
-                <span class="placeholder"></span>
-            </div>
-            <div id="records-list" class="records-list"></div>
-            <button id="clear-records-btn" class="secondary-btn">清空记录</button>
-        </div>
-
-        <div id="win-modal" class="modal">
-            <div class="modal-content">
-                <h2 class="modal-title">🎉 通关成功！</h2>
-                <p class="modal-phrase" id="win-phrase"></p>
-                <p class="modal-time" id="win-time"></p>
-                <div class="modal-buttons">
-                    <button id="next-level-btn" class="primary-btn">下一关</button>
-                    <button id="win-back-btn" class="secondary-btn">返回菜单</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="game.js"></script>
+    <script src="data/phrases.js"></script>
+    <script src="core/Storage.js"></script>
+    <script src="core/MazeGenerator.js"></script>
+    <script src="utils/Timer.js"></script>
+    <script src="components/HomeScreen.js"></script>
+    <script src="components/GameScreen.js"></script>
+    <script src="components/RecordsScreen.js"></script>
+    <script src="components/WinModal.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
